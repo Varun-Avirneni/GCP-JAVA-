@@ -1,0 +1,66 @@
+import java.util.*;
+
+public class Collections {
+
+    public static void main(String[] args) {
+        // Create a set
+        Set<String> fruits = new HashSet<>();
+        fruits.add("Apple");
+        fruits.add("Orange");
+        fruits.add("Banana");
+        fruits.add("Grapes");
+        fruits.add("Mango");
+
+        // Add an element to the set
+        fruits.add("Apple"); // This will not be added because Apple is already present in the set
+
+        // Remove an element from the set
+        fruits.remove("Banana");
+
+        // Check if an element is in the set
+        System.out.println("Is Mango in the set? " + fruits.contains("Mango"));
+
+        // Get the length of the set
+        System.out.println("The number of fruits: " + fruits.size());
+
+        // Create a list
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(1);
+        numbers.add(2);
+        numbers.add(3);
+        numbers.add(4);
+        numbers.add(5);
+
+        // Add an element to the list
+        numbers.add(6);
+
+        // Remove an element from the list
+        numbers.remove(3);
+
+        // Get the length of the list
+        System.out.println("The number of numbers: " + numbers.size());
+
+        // Create a map
+        Map<String, String> countries = new HashMap<>();
+        countries.put("US", "America");
+        countries.put("UK", "England");
+        countries.put("China", "Beijing");
+        countries.put("India", "New Delhi");
+        countries.put("France", "Paris");
+
+        // Get the value of a key
+        System.out.println("The capital of France is: " + countries.get("France"));
+
+        // Add a key-value pair to the map
+        countries.put("Japan", "Tokyo");
+
+        // Remove a key-value pair from the map
+        countries.remove("UK");
+
+        // Get the keys of the map
+        System.out.println("The keys of the map: " + countries.keySet());
+
+        // Get the values of the map
+        System.out.println("The values of the map: " + countries.values());
+    }
+}
